@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   
   resources :events
-   devise_for :users
-
+  devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'signup' }
   root 'pages#home'
   get 'event' => 'pages#event'
   get 'contact' => 'pages#contact'
- 
+  get 'users/:id', to: 'users#show', as: :user
+
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 end
+
+
 require_relative "boot"

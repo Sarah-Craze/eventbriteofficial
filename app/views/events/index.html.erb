@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: pink"><%= notice %></p>
 
-<h1>Events</h1>
-
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
-  <% end %>
+<center><h1>Events</h1><center>
+<div class="card bg-black bg-opacity-75 text-white p-3 d-inline-block text-center">
+  <div id="events">
+    <% @events.each do |event| %>
+      <%= render event %>
+      <p>
+        <%= link_to "Show this event", event %>
+      </p>
+    <% end %>
+  </div>
 </div>
 
+
+<br>
 <%= link_to "New event", new_event_path %>

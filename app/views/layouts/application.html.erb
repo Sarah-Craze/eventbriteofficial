@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-    height: 100vh; /* La hauteur de la page prendra 100% de la hauteur de la vue */
+    height: 100vh; /* La hauteur de la page prendra 100% de la hauteur de la vue */}
 </style>
 
 </head>
@@ -40,7 +40,12 @@
       <li class="nav-item">
         <%= link_to "Contact", contact_path, class: "nav-link" %>
       </li>
+      
+    
       <% if user_signed_in? %>
+      <li class="nav-item">
+      <%= link_to "Profil", user_path(current_user), class: "nav-link" %>      
+      </li>
         <li class="nav-item">
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class: "nav-link" %>
         </li>
