@@ -30,6 +30,10 @@ gem 'dotenv-rails'
 
 gem 'stripe'
 
+gem 'bootstrap', '~> 5.0.0'
+
+gem 'bootswatch-rails'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end

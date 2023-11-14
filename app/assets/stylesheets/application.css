@@ -2,3 +2,6 @@
 @import "bootstrap";
 
 @import "pages";
+
+@import 'path/to/bootstrap.min.css';  /* Assurez-vous d'avoir le chemin correct vers Bootstrap */
+@import 'path/to/bootswatch/vapor/bootstrap.min.css';  /* Assurez-vous d'avoir le chemin correct vers le thème Vapor */
