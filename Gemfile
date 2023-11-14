@@ -28,6 +28,8 @@ gem 'devise'
 
 gem 'dotenv-rails'
 
+gem 'stripe'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
