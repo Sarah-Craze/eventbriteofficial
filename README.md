@@ -1,24 +1,11 @@
-# README
+# Bootswatch/Bootstrap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)
 
-Things you may want to cover:
+Add the following import :
+import "bootswatch/dist/[theme]/bootstrap.min.css";
 
-* Ruby version
+In your Ruby project, you can access the latest version of each theme by adding the following to your Gemfile and running bundle install:
+gem "bootswatch"
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+:)
