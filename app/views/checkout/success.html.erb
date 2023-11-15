@@ -1,7 +1,16 @@
-html 
-<div class="container text-center my-5"> 
-<h1>Succès</h1> 
-<p>Nous avons bien reçu votre paiement de <%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %>.</p> 
-<p>Le statut de votre paiement est : <%= @payment_intent.status %>.</p> 
-<a href="/events" class="btn btn-primary">Retour aux événements</a>
-  
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card bg-black bg-opacity-50 text-white p-5 text-center" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h1 class="mb-4 pb-2 pb-md-0 mb-md-5 text-center" style="font-size: 2rem;">Succès !</h1>
+            <p>We have succesfully received your payment of <%= number_to_currency(@payment_intent.amount_received / 100.0, unit: "€", separator: ",", delimiter: "", format: "%n %u") %>.</p> 
+            <p>The status of your payment is : <%= @payment_intent.status %>.</p> 
+            <a href="/events" class="btn btn-primary">Back to events</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
