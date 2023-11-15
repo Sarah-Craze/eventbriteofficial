@@ -9,4 +9,8 @@ class User < ApplicationRecord
        
          has_many :admin_events, class_name: 'Event', foreign_key: 'admin_id'
        
+
+         def username
+          "#{first_name} #{last_name}"
+        end
 end
